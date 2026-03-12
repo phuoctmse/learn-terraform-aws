@@ -1,4 +1,4 @@
-## Hành trình học Terraform trên AWS từ zero
+## Lộ trình học Terraform từ zero đến nâng cao trên AWS
 
 Repo này ghi lại quá trình tôi **học Terraform từ con số 0**, triển khai hạ tầng trên **AWS** theo tài liệu chính thức của HashiCorp:
 
@@ -129,4 +129,30 @@ Trong tương lai, tôi có thể mở rộng:
 - Thêm nhiều resource (VPC, Security Group, RDS, S3, …).
 - Áp dụng module, remote state, workspace.
 - Tích hợp CI/CD cho Terraform.
+
+---
+
+## Lộ trình tổng quan (Zero → Nâng cao)
+
+- **Giai đoạn 1 – Nhập môn / Cơ bản**
+  - Làm theo tutorial HashiCorp để:
+    - Cài Terraform, AWS CLI.
+    - Viết các file cơ bản: `terraform.tf`, `main.tf`.
+    - Hiểu provider, data source, resource.
+    - Sử dụng các lệnh: `init`, `fmt`, `validate`, `plan`, `apply`, `destroy`.
+
+- **Giai đoạn 2 – Trung cấp**
+  - Tổ chức lại cấu trúc file (`variables.tf`, `outputs.tf`, `providers.tf`,…).
+  - Dùng `variable`, `output`, `locals`.
+  - Quản lý nhiều resource hơn: VPC, subnet, security group, S3, RDS (tùy nhu cầu).
+
+- **Giai đoạn 3 – Nâng cao**
+  - Tách và sử dụng **module** (tự viết hoặc dùng từ Registry).
+  - Dùng **remote backend** (HCP Terraform hoặc S3) để quản lý state.
+  - Dùng **workspace** cho nhiều môi trường (dev/stage/prod).
+
+- **Giai đoạn 4 – Chuyên sâu & Thực chiến**
+  - Tích hợp Terraform vào CI/CD (GitHub Actions, GitLab CI, …).
+  - Thêm linting / security check (tflint, checkov, … nếu áp dụng).
+  - Xây dựng quy trình review `terraform plan` và quản lý thay đổi hạ tầng theo team.
 
